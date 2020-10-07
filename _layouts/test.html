@@ -1,0 +1,16 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>Test!!!!! (fonctions stp :( ))</title>
+    </head>
+    <body>
+        <pre>
+            {% for article in strapi.collections.articles %}
+                <span>{{ article.title }}</span>
+                {% if article.image %}
+                    <img src="{{ article.image.url }}" alt="{{ article.image.name}}"/>
+                {% endif %}
+            {% endfor %}
+        </pre>
+    </body>
+</html>
