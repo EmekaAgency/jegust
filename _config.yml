@@ -59,8 +59,7 @@ strapi:
   endpoint: https://emekaback.herokuapp.com
   collections:
     articles:
-      type: articles
-      permalink: "/articles/:id"
+      permalink: "/articles/:title/"
       # Layout file for this collection
       layout: test.html
       output: true

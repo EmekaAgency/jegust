@@ -1,15 +1,16 @@
 <!doctype HTML>
 <html>
     <head>
-        <title>Test!!!!! (fonctions stp :( ))</title>
+        <title>Test!!!!!</title>
     </head>
     <body>
         <pre>
             {% for article in strapi.collections.articles %}
-                <span>{{ article.title }}</span>
-                {% if article.image %}
-                    <img src="{{ article.image.url }}" alt="{{ article.image.name}}"/>
-                {% endif %}
+                <span
+                    style="color:red;font-size:92px;font-weight:900"
+                >
+                    {{- article.title -}}
+                </span>
             {% endfor %}
         </pre>
     </body>
