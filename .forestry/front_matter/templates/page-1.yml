@@ -1,4 +1,21 @@
 ---
 label: Page 1
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: Titre du site
+- name: content1
+  type: text
+  config:
+    required: false
+  label: content1
+  description: Première section de contenu
+- name: 2nd_ligne_de_contenu
+  type: text
+  config:
+    required: false
+  label: 2nd ligne de contenu
