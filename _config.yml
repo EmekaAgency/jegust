@@ -56,10 +56,10 @@ plugins:
 # Strapi
 strapi:
   # Your API endpoint (optional, default to http://localhost:1337)
-  endpoint: https://emekaback.herokuapp.com
+  endpoint: http://51.178.141.192:1339
   collections:
     articles:
-      permalink: "/articles/:title/"
-      # Layout file for this collection
-      layout: test.html
+      type: articles
+      permalink: "/:slug"
+      layout: project.html
       output: true

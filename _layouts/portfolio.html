@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script>
@@ -142,159 +142,39 @@
                                     <!-- Showcase Slider -->
                                     <div id="showcase-slider" class="swiper-container">
                                         <div id="itemsWrapper" class="swiper-wrapper">
-                                        
-                                            <div class="swiper-slide" data-slide="01">                                            
+                                            
+                                        {% assign img_host = "http://51.178.141.192:1339" %}
+                                        {% for article in strapi.collections.articles %}
+
+                                        <!-- ///////////////////////////////////////////////////////////////////////////// -->
+                                            
+                                            <div class="swiper-slide" data-slide="{{ article.id }}">                                    
                                                 <div class="img-mask">
-                                                    <div class="section-image"><img src="images/01hero.jpg" class="item-image grid__item-img" alt=""></div>                                                
-                                                    <img class="grid__item-img grid__item-img--large" src="images/01hero.jpg" />                              
+                                                    <div class="section-image"><img class="item-image grid__item-img" src="{{ img_host }}{{ article.MainImg.url }}" alt="" crossorigin="anonymous"></div>                                                
+                                                    <img class="grid__item-img grid__item-img--large" src="{{ img_host }}{{ article.MainImg.url }}" crossorigin="anonymous"/>                               
                                                 </div>
                                                 <div class="move-caption">
                                                     <div class="outer">                            
-                                                        <div class="inner">
-                                                            <div class="move-title" data-swiper-parallax-x="-200%"><span>SITE 1</span></div>
-                                                            <a data-type="page-transition" href="project01.html"></a>
+                                                        <div class="inner">                        
+                                                            <div class="move-title" data-swiper-parallax-x="-200%"><span>{{ article.MainTitle }}</span></div>
+                                                            <a data-type="page-transition" href="{{ article.slug }}.html"></a>                                
                                                         </div>                            
                                                     </div>
                                                 </div>
                                                 <div class="move-caption stroked">
                                                     <div class="outer">                            
                                                         <div class="inner">                        
-                                                            <div class="move-title thumb-link" data-swiper-parallax-x="-200%" data-firstline="View" data-secondline="Project"><span>SITE 1</span></div>
-                                                            <div class="subtitle" data-swiper-parallax-x="-60%"><span>Description Site 1</span></div>
+                                                            <div class="move-title thumb-link" data-swiper-parallax-x="-200%" data-firstline="View" data-secondline="Project"><span>{{ article.MainTitle }}</span></div>
+                                                            <div class="subtitle" data-swiper-parallax-x="-60%"><span>{{ article.MainSubtitle }}</span></div>
                                                         </div>                            
                                                     </div>
                                                 </div>
                                             </div>
                                             
-                                            
-                                            <div class="swiper-slide" data-slide="02">                                    
-                                                <div class="img-mask">
-                                                    <div class="section-image"><img class="item-image grid__item-img" src="images/02hero.jpg" alt=""></div>                                                
-                                                    <img class="grid__item-img grid__item-img--large" src="images/02hero.jpg" />                               
-                                                </div>
-                                                <div class="move-caption">
-                                                    <div class="outer">                            
-                                                        <div class="inner">                        
-                                                            <div class="move-title" data-swiper-parallax-x="-200%"><span>SITE 2</span></div>
-                                                            <a data-type="page-transition" href="project02.html"></a>                                
-                                                        </div>                            
-                                                    </div>
-                                                </div>
-                                                <div class="move-caption stroked">
-                                                    <div class="outer">                            
-                                                        <div class="inner">                        
-                                                            <div class="move-title thumb-link" data-swiper-parallax-x="-200%" data-firstline="View" data-secondline="Project"><span>SITE 2</span></div>
-                                                            <div class="subtitle" data-swiper-parallax-x="-60%"><span>Description site 2</span></div>
-                                                        </div>                            
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            
-                                            <div class="swiper-slide" data-slide="03">                                    
-                                                <div class="img-mask">
-                                                    <div class="section-image"><img class="item-image grid__item-img" src="images/03hero.jpg" alt=""></div>                                                
-                                                    <img class="grid__item-img grid__item-img--large" src="images/03hero.jpg" />                                    
-                                                </div>
-                                                <div class="move-caption">
-                                                    <div class="outer">                            
-                                                        <div class="inner">                        
-                                                            <div class="move-title" data-swiper-parallax-x="-200%"><span>Site 3</span></div>
-                                                            <a data-type="page-transition" href="project03.html"></a>                                
-                                                        </div>                            
-                                                    </div>
-                                                </div>
-                                                <div class="move-caption stroked">
-                                                    <div class="outer">                            
-                                                        <div class="inner">                        
-                                                            <div class="move-title thumb-link" data-swiper-parallax-x="-200%" data-firstline="View" data-secondline="Project"><span>Site 3</span></div>
-                                                            <div class="subtitle" data-swiper-parallax-x="-60%"><span>Description site 3</span></div>
-                                                        </div>                            
-                                                    </div>
-                                                </div>  
-                                            </div>
-                                            
-                                            
-                                            <div class="swiper-slide" data-slide="04">                                    
-                                                <div class="img-mask">
-                                                    <div class="section-image">
-                                                    	<img class="item-image grid__item-img" src="images/04hero.jpg" alt="">
-                                                        <div class="hero-video-wrapper">
-                                                            <video loop muted class="bgvid">
-                                                                <source src="http://clapat.ro/themes/colega/images/danceroom.mp4" type="video/mp4">
-																<source src="http://clapat.ro/themes/colega/images/danceroom.webm">
-                                                            </video>
-                                                        </div>
-                                                    </div>                                                
-                                                    <img class="grid__item-img grid__item-img--large" src="images/04hero.jpg" />                                    
-                                                </div>
-                                                <div class="move-caption">
-                                                    <div class="outer">                            
-                                                        <div class="inner">                        
-                                                            <div class="move-title" data-swiper-parallax-x="-200%"><span>Site Video</span></div>
-                                                            <a data-type="page-transition" href="project04.html"></a>                                
-                                                        </div>                            
-                                                    </div>
-                                                </div>
-                                                <div class="move-caption stroked">
-                                                    <div class="outer">                            
-                                                        <div class="inner">                        
-                                                            <div class="move-title thumb-link" data-swiper-parallax-x="-200%" data-firstline="View" data-secondline="Project"><span>Site Video</span></div>
-                                                            <div class="subtitle" data-swiper-parallax-x="-60%"><span>Description site video</span></div>
-                                                        </div>                            
-                                                    </div>
-                                                </div>  
-                                            </div>
-                                            
-                                            
-                                            <div class="swiper-slide" data-slide="05">                                    
-                                                <div class="img-mask">
-                                                    <div class="section-image"><img class="item-image grid__item-img" src="images/05hero.jpg" alt=""></div>                                                
-                                                    <img class="grid__item-img grid__item-img--large" src="images/05hero.jpg" />                                    
-                                                </div>
-                                                <div class="move-caption">
-                                                    <div class="outer">                            
-                                                        <div class="inner">                        
-                                                            <div class="move-title" data-swiper-parallax-x="-200%"><span>Site 5</span></div>
-                                                            <a data-type="page-transition" href="project05.html"></a>                                
-                                                        </div>                            
-                                                    </div>
-                                                </div>
-                                                <div class="move-caption stroked">
-                                                    <div class="outer">                            
-                                                        <div class="inner">                        
-                                                            <div class="move-title thumb-link" data-swiper-parallax-x="-200%" data-firstline="View" data-secondline="Project"><span>Site 5</span></div>
-                                                            <div class="subtitle" data-swiper-parallax-x="-60%"><span>Description site 5</span></div>
-                                                        </div>                            
-                                                    </div>
-                                                </div>  
-                                            </div>
-                                            
-                                            
-                                            <div class="swiper-slide" data-slide="06">                                    
-                                                <div class="img-mask">
-                                                    <div class="section-image"><img class="item-image grid__item-img" src="images/06hero.jpg" alt=""></div>                                                
-                                                    <img class="grid__item-img grid__item-img--large" src="images/06hero.jpg" />                                    
-                                                </div>
-                                                <div class="move-caption">
-                                                    <div class="outer">                            
-                                                        <div class="inner">                        
-                                                            <div class="move-title" data-swiper-parallax-x="-200%"><span>Site 6</span></div>
-                                                            <a data-type="page-transition" href="project06.html"></a>                                
-                                                        </div>                            
-                                                    </div>
-                                                </div>
-                                                <div class="move-caption stroked">
-                                                    <div class="outer">                            
-                                                        <div class="inner">                        
-                                                            <div class="move-title thumb-link" data-swiper-parallax-x="-200%" data-firstline="View" data-secondline="Project"><span>Site 6</span></div>
-                                                            <div class="subtitle" data-swiper-parallax-x="-60%"><span>Description site 6</span></div>
-                                                        </div>                            
-                                                    </div>
-                                                </div>  
-                                            </div>
-                                                                                    
-                                            
+                                        <!-- ///////////////////////////////////////////////////////////////////////////// -->
+
+                                        {% endfor %}
+                    
                                         </div>                                  
                                     </div>
                                     <!-- Showcase Slider -->                                    
